@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -29,11 +29,11 @@ module WonderfulEditor2
       g.stylesheets false
       g.helper false
       g.test_framework :rspec,
-                        view_specs: false,
-                        routing_specs: false,
-                        helper_specs: false,
-                        controller_specs: false,
-                        request_specs: true
+                       view_specs: false,
+                       routing_specs: false,
+                       helper_specs: false,
+                       controller_specs: false,
+                       request_specs: true
     end
     config.api_only = true
     # Settings in config/environments/* take precedence over those specified here.
