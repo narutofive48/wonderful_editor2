@@ -21,5 +21,10 @@
 require "rails_helper"
 
 RSpec.describe ArticleLike, type: :model do
-  # pending "add some examples to (or delete) #{__FILE__}"
+  context "データが揃っている場合" do
+    it "article_likeが書き込まれる" do
+      article_like = ArticleLike.new(id: 1,article_id: 1,user_id: 1)
+      expect(article_like).to be_valid
+    end
+  end
 end
