@@ -12,6 +12,15 @@ module Api::V1
       article = current_user.articles.create!(article_params)
       render json: article
     end
+    def update
+      article = current_user.articles.find(params[:id])
+      article.update!(article_params)
+      render json: article
+    end
+    def destroy
+      article = current_user.articles.find(params[:id])
+      article.destroy!
+    end
     private
       def article_params
         params.require(:article).permit(:title, :body)
