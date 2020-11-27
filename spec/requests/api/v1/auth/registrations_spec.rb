@@ -13,7 +13,6 @@ RSpec.describe "Api::V1::Auth::Registrations", type: :request do
       it "header 情報を取得することができる" do
         subject
         header = response.header
-        binding.pry
         expect(header["access-token"]).to be_present
         expect(header["client"]).to be_present
         expect(header["expiry"]).to be_present
