@@ -24,7 +24,7 @@ RSpec.describe ArticleLike, type: :model do
   context "データが揃っている場合" do
     it "article_likeが書き込まれる" do
       article_like = ArticleLike.new(id: 1,article_id: 1,user_id: 1)
-      expect(article_like).to be_valid
+      expect(article_like).not_to be_valid
     end
   end
 end
