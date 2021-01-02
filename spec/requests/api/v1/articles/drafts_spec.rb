@@ -39,7 +39,7 @@ RSpec.describe "Api::V1::Articles::Drafts", type: :request do
       end
       context "対象の記事が他のユーザーが書いた下書きのとき" do
         let(:article){ create(:article, :draft)}
-        fit "記事が見つからない" do
+        it "記事が見つからない" do
           expect { subject }.to raise_error ActiveRecord::RecordNotFound
         end
       end
